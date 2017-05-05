@@ -17,11 +17,27 @@
 		B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */; };
 		B32B91DC1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91DB1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift */; };
 		B32B91E71EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */; };
-		B3E25B061EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */; };
-		B3E25B071EB9C8DB0015FBA7 /* redMountain.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B051EB9C8DB0015FBA7 /* redMountain.png */; };
-		B3E25B091EB9DDCD0015FBA7 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B081EB9DDCD0015FBA7 /* screen.png */; };
-		B3E25B0B1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */; };
-		B3E25B0D1EBC1BD00015FBA7 /* EPCUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */; };
+		B3E25B141EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */; };
+		B3E25B161EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */; };
+		B3E25B181EBC4D470015FBA7 /* EPCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B171EBC4D470015FBA7 /* EPCConstants.swift */; };
+		B3E25B1A1EBC50B60015FBA7 /* EPCUploadListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */; };
+		B3E25B3C1EBC603B0015FBA7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B251EBC603B0015FBA7 /* NSArray+Log.m */; };
+		B3E25B3D1EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B271EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m */; };
+		B3E25B3E1EBC603B0015FBA7 /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B291EBC603B0015FBA7 /* NSObject+CZRuntime.m */; };
+		B3E25B3F1EBC603B0015FBA7 /* NSString+CZBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B2B1EBC603B0015FBA7 /* NSString+CZBase64.m */; };
+		B3E25B401EBC603B0015FBA7 /* NSString+CZHash.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B2D1EBC603B0015FBA7 /* NSString+CZHash.m */; };
+		B3E25B411EBC603B0015FBA7 /* NSString+CZPath.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B2F1EBC603B0015FBA7 /* NSString+CZPath.m */; };
+		B3E25B421EBC603B0015FBA7 /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B311EBC603B0015FBA7 /* UIButton+CZAddition.m */; };
+		B3E25B431EBC603B0015FBA7 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B331EBC603B0015FBA7 /* UIColor+CZAddition.m */; };
+		B3E25B441EBC603B0015FBA7 /* UILabel+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B351EBC603B0015FBA7 /* UILabel+CZAddition.m */; };
+		B3E25B451EBC603B0015FBA7 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B371EBC603B0015FBA7 /* UIScreen+CZAddition.m */; };
+		B3E25B461EBC603B0015FBA7 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B391EBC603B0015FBA7 /* UIView+CZAddition.m */; };
+		B3E25B471EBC603B0015FBA7 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B3B1EBC603B0015FBA7 /* UIViewController+CZAddition.m */; };
+		B3E25B491EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B481EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */; };
+		B3E25B4D1EBC64D60015FBA7 /* EPCDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */; };
+		B3E25B4F1EBC696D0015FBA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */; };
+		B3E25B5A1EBC75A80015FBA7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E25B591EBC75A80015FBA7 /* libsqlite3.0.tbd */; };
+		B3E25B601EBC76320015FBA7 /* EPCSqliteMangager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +78,41 @@
 		B32B91E21EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPCMobileS3UploadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPCMobileS3UploadDemoUITests.swift; sourceTree = "<group>"; };
 		B32B91E81EB8838E00603F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ios-CoreAnimation.pdf"; sourceTree = "<group>"; };
-		B3E25B051EB9C8DB0015FBA7 /* redMountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMountain.png; sourceTree = "<group>"; };
-		B3E25B081EB9DDCD0015FBA7 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
-		B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSCognitoCredentialsProviderHelper.swift; sourceTree = "<group>"; };
-		B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCUploadController.swift; sourceTree = "<group>"; };
+		B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCAwsS3TaskManager.swift; sourceTree = "<group>"; };
+		B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCAwsS3TaskModel.swift; sourceTree = "<group>"; };
+		B3E25B171EBC4D470015FBA7 /* EPCConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCConstants.swift; sourceTree = "<group>"; };
+		B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCUploadListController.swift; sourceTree = "<group>"; };
+		B3E25B231EBC603B0015FBA7 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		B3E25B241EBC603B0015FBA7 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		B3E25B251EBC603B0015FBA7 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		B3E25B261EBC603B0015FBA7 /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
+		B3E25B271EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CZAdditon.m"; sourceTree = "<group>"; };
+		B3E25B281EBC603B0015FBA7 /* NSObject+CZRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CZRuntime.h"; sourceTree = "<group>"; };
+		B3E25B291EBC603B0015FBA7 /* NSObject+CZRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CZRuntime.m"; sourceTree = "<group>"; };
+		B3E25B2A1EBC603B0015FBA7 /* NSString+CZBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZBase64.h"; sourceTree = "<group>"; };
+		B3E25B2B1EBC603B0015FBA7 /* NSString+CZBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZBase64.m"; sourceTree = "<group>"; };
+		B3E25B2C1EBC603B0015FBA7 /* NSString+CZHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZHash.h"; sourceTree = "<group>"; };
+		B3E25B2D1EBC603B0015FBA7 /* NSString+CZHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZHash.m"; sourceTree = "<group>"; };
+		B3E25B2E1EBC603B0015FBA7 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
+		B3E25B2F1EBC603B0015FBA7 /* NSString+CZPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZPath.m"; sourceTree = "<group>"; };
+		B3E25B301EBC603B0015FBA7 /* UIButton+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B311EBC603B0015FBA7 /* UIButton+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B321EBC603B0015FBA7 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B331EBC603B0015FBA7 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B341EBC603B0015FBA7 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B351EBC603B0015FBA7 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B361EBC603B0015FBA7 /* UIScreen+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B371EBC603B0015FBA7 /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B381EBC603B0015FBA7 /* UIView+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B391EBC603B0015FBA7 /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B3A1EBC603B0015FBA7 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
+		B3E25B3B1EBC603B0015FBA7 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		B3E25B481EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSCognitoCredentialsProviderHelper.swift; sourceTree = "<group>"; };
+		B3E25B4A1EBC637D0015FBA7 /* EPCMobileS3UploadDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EPCMobileS3UploadDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCDirectory.swift; sourceTree = "<group>"; };
+		B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B3E25B591EBC75A80015FBA7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCSqliteMangager.swift; sourceTree = "<group>"; };
 		B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E25B5A1EBC75A80015FBA7 /* libsqlite3.0.tbd in Frameworks */,
 				A3A5E15571FD47EF5AB29F23 /* Pods_EPCMobileS3UploadDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,11 +194,7 @@
 				B32B91CD1EB8838E00603F05 /* Assets.xcassets */,
 				B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */,
 				B32B91D21EB8838E00603F05 /* Info.plist */,
-				B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */,
-				B3E25B051EB9C8DB0015FBA7 /* redMountain.png */,
-				B3E25B081EB9DDCD0015FBA7 /* screen.png */,
-				B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */,
-				B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */,
+				B3E25B4A1EBC637D0015FBA7 /* EPCMobileS3UploadDemo-Bridging-Header.h */,
 			);
 			path = EPCMobileS3UploadDemo;
 			sourceTree = "<group>";
@@ -177,6 +220,7 @@
 		B3E25B0E1EBC2CBA0015FBA7 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -184,6 +228,7 @@
 		B3E25B0F1EBC2CBA0015FBA7 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				B3E25B171EBC4D470015FBA7 /* EPCConstants.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -198,13 +243,85 @@
 		B3E25B111EBC2CBA0015FBA7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B3E25B5B1EBC75F90015FBA7 /* DB */,
+				B3E25B1B1EBC5F5C0015FBA7 /* Tools */,
+				B3E25B121EBC481B0015FBA7 /* EPCAwsS3TaskManager */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		B3E25B121EBC481B0015FBA7 /* EPCAwsS3TaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B481EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */,
+				B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */,
+				B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */,
+			);
+			path = EPCAwsS3TaskManager;
+			sourceTree = "<group>";
+		};
+		B3E25B1B1EBC5F5C0015FBA7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B4B1EBC63F10015FBA7 /* Extensions */,
+				B3E25B221EBC603B0015FBA7 /* Additions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B3E25B221EBC603B0015FBA7 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B231EBC603B0015FBA7 /* CZAdditions.h */,
+				B3E25B241EBC603B0015FBA7 /* NSArray+Log.h */,
+				B3E25B251EBC603B0015FBA7 /* NSArray+Log.m */,
+				B3E25B261EBC603B0015FBA7 /* NSAttributedString+CZAdditon.h */,
+				B3E25B271EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m */,
+				B3E25B281EBC603B0015FBA7 /* NSObject+CZRuntime.h */,
+				B3E25B291EBC603B0015FBA7 /* NSObject+CZRuntime.m */,
+				B3E25B2A1EBC603B0015FBA7 /* NSString+CZBase64.h */,
+				B3E25B2B1EBC603B0015FBA7 /* NSString+CZBase64.m */,
+				B3E25B2C1EBC603B0015FBA7 /* NSString+CZHash.h */,
+				B3E25B2D1EBC603B0015FBA7 /* NSString+CZHash.m */,
+				B3E25B2E1EBC603B0015FBA7 /* NSString+CZPath.h */,
+				B3E25B2F1EBC603B0015FBA7 /* NSString+CZPath.m */,
+				B3E25B301EBC603B0015FBA7 /* UIButton+CZAddition.h */,
+				B3E25B311EBC603B0015FBA7 /* UIButton+CZAddition.m */,
+				B3E25B321EBC603B0015FBA7 /* UIColor+CZAddition.h */,
+				B3E25B331EBC603B0015FBA7 /* UIColor+CZAddition.m */,
+				B3E25B341EBC603B0015FBA7 /* UILabel+CZAddition.h */,
+				B3E25B351EBC603B0015FBA7 /* UILabel+CZAddition.m */,
+				B3E25B361EBC603B0015FBA7 /* UIScreen+CZAddition.h */,
+				B3E25B371EBC603B0015FBA7 /* UIScreen+CZAddition.m */,
+				B3E25B381EBC603B0015FBA7 /* UIView+CZAddition.h */,
+				B3E25B391EBC603B0015FBA7 /* UIView+CZAddition.m */,
+				B3E25B3A1EBC603B0015FBA7 /* UIViewController+CZAddition.h */,
+				B3E25B3B1EBC603B0015FBA7 /* UIViewController+CZAddition.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		B3E25B4B1EBC63F10015FBA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */,
+				B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3E25B5B1EBC75F90015FBA7 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		E6CBC964C2D8D68E2AB7DC61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3E25B591EBC75A80015FBA7 /* libsqlite3.0.tbd */,
 				1C745EAC8ACFF77EE372C4BB /* Pods_EPCMobileS3UploadDemo.framework */,
 				AD30C147DECDA7C749C15ECE /* Pods_EPCMobileS3UploadDemoTests.framework */,
 				C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */,
@@ -283,6 +400,7 @@
 		B32B91BB1EB8838E00603F05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = EPC;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Lio;
@@ -290,6 +408,7 @@
 					B32B91C21EB8838E00603F05 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 9PJ22KK765;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					B32B91D61EB8838E00603F05 = {
@@ -331,11 +450,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E25B071EB9C8DB0015FBA7 /* redMountain.png in Resources */,
-				B3E25B091EB9DDCD0015FBA7 /* screen.png in Resources */,
 				B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */,
 				B32B91CE1EB8838E00603F05 /* Assets.xcassets in Resources */,
-				B3E25B061EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf in Resources */,
 				B32B91CC1EB8838E00603F05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,9 +616,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32B91C91EB8838E00603F05 /* ViewController.swift in Sources */,
-				B3E25B0D1EBC1BD00015FBA7 /* EPCUploadController.swift in Sources */,
+				B3E25B4F1EBC696D0015FBA7 /* String+Extensions.swift in Sources */,
+				B3E25B441EBC603B0015FBA7 /* UILabel+CZAddition.m in Sources */,
+				B3E25B3F1EBC603B0015FBA7 /* NSString+CZBase64.m in Sources */,
+				B3E25B141EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift in Sources */,
 				B32B91C71EB8838E00603F05 /* AppDelegate.swift in Sources */,
-				B3E25B0B1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */,
+				B3E25B401EBC603B0015FBA7 /* NSString+CZHash.m in Sources */,
+				B3E25B431EBC603B0015FBA7 /* UIColor+CZAddition.m in Sources */,
+				B3E25B3E1EBC603B0015FBA7 /* NSObject+CZRuntime.m in Sources */,
+				B3E25B471EBC603B0015FBA7 /* UIViewController+CZAddition.m in Sources */,
+				B3E25B451EBC603B0015FBA7 /* UIScreen+CZAddition.m in Sources */,
+				B3E25B601EBC76320015FBA7 /* EPCSqliteMangager.swift in Sources */,
+				B3E25B1A1EBC50B60015FBA7 /* EPCUploadListController.swift in Sources */,
+				B3E25B4D1EBC64D60015FBA7 /* EPCDirectory.swift in Sources */,
+				B3E25B421EBC603B0015FBA7 /* UIButton+CZAddition.m in Sources */,
+				B3E25B3D1EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m in Sources */,
+				B3E25B491EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */,
+				B3E25B3C1EBC603B0015FBA7 /* NSArray+Log.m in Sources */,
+				B3E25B181EBC4D470015FBA7 /* EPCConstants.swift in Sources */,
+				B3E25B461EBC603B0015FBA7 /* UIView+CZAddition.m in Sources */,
+				B3E25B411EBC603B0015FBA7 /* NSString+CZPath.m in Sources */,
+				B3E25B161EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,11 +791,14 @@
 			baseConfigurationReference = 87BD8796F11D1B597967692A /* Pods-EPCMobileS3UploadDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9PJ22KK765;
 				INFOPLIST_FILE = EPCMobileS3UploadDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EPCMobileS3UploadDemo/EPCMobileS3UploadDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -671,11 +808,13 @@
 			baseConfigurationReference = 567E6CC51ADD4DE9AF0AD868 /* Pods-EPCMobileS3UploadDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9PJ22KK765;
 				INFOPLIST_FILE = EPCMobileS3UploadDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EPCMobileS3UploadDemo/EPCMobileS3UploadDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

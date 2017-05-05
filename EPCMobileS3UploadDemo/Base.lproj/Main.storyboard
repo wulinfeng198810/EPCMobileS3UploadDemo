@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,99 +20,10 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-Jv-qBR">
-                                <rect key="frame" x="26" y="144" width="323" height="2"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="uE4-Q1-pxk"/>
-                                </constraints>
-                            </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6K-Su-IJr">
-                                <rect key="frame" x="60" y="225" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="UyD-iS-tLE"/>
-                                    <constraint firstAttribute="width" constant="60" id="cKI-Um-fuK"/>
-                                </constraints>
-                                <state key="normal" title="start">
-                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F8u-tr-asa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjb-qS-gn6">
-                                <rect key="frame" x="157" y="225" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="b70-Ar-hbY"/>
-                                    <constraint firstAttribute="height" constant="50" id="htf-zB-lFa"/>
-                                </constraints>
-                                <state key="normal" title="pause">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="pauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sy-Xn-trc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-tS-pFc">
-                                <rect key="frame" x="253" y="225" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="7cI-VQ-NQd"/>
-                                    <constraint firstAttribute="height" constant="50" id="Uec-5K-vlp"/>
-                                </constraints>
-                                <state key="normal" title="cancel">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oss-SV-Ttn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-9g-uXY">
-                                <rect key="frame" x="26" y="154" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Nmz-Ze-r93"/>
-                                    <constraint firstAttribute="height" constant="21" id="QTj-s2-x8F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU3-p6-J92">
-                                <rect key="frame" x="60" y="331" width="80" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HvY-AC-c5r"/>
-                                    <constraint firstAttribute="width" constant="80" id="dfY-PQ-huu"/>
-                                </constraints>
-                                <state key="normal" title="resumeAll"/>
-                                <connections>
-                                    <action selector="resumeAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uqk-1t-PVX"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jjb-qS-gn6" firstAttribute="leading" secondItem="D6K-Su-IJr" secondAttribute="trailing" constant="37" id="A3v-33-cfZ"/>
-                            <constraint firstItem="tU3-p6-J92" firstAttribute="top" secondItem="jjb-qS-gn6" secondAttribute="bottom" constant="56" id="FLS-4c-Huw"/>
-                            <constraint firstItem="jjb-qS-gn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ptq-Rp-hMt"/>
-                            <constraint firstItem="sH1-Jv-qBR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Sjm-vw-wda"/>
-                            <constraint firstItem="gZ5-tS-pFc" firstAttribute="leading" secondItem="jjb-qS-gn6" secondAttribute="trailing" constant="36" id="bJz-Br-EIl"/>
-                            <constraint firstItem="D6K-Su-IJr" firstAttribute="top" secondItem="sH1-Jv-qBR" secondAttribute="bottom" constant="79" id="eJY-Uh-DZD"/>
-                            <constraint firstItem="tU3-p6-J92" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="ikF-J2-irG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sH1-Jv-qBR" secondAttribute="trailing" constant="10" id="kOl-Ab-gGe"/>
-                            <constraint firstItem="sH1-Jv-qBR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="pag-mw-aed"/>
-                            <constraint firstItem="gZ5-tS-pFc" firstAttribute="top" secondItem="sH1-Jv-qBR" secondAttribute="bottom" constant="79" id="v5e-bs-3rg"/>
-                            <constraint firstItem="jjb-qS-gn6" firstAttribute="top" secondItem="sH1-Jv-qBR" secondAttribute="bottom" constant="79" id="vGn-6k-hiU"/>
-                            <constraint firstItem="1fb-9g-uXY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="xXN-af-hrB"/>
-                            <constraint firstItem="1fb-9g-uXY" firstAttribute="top" secondItem="sH1-Jv-qBR" secondAttribute="bottom" constant="8" id="zBe-6v-rRe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vQ6-SX-S9N"/>
-                    <connections>
-                        <outlet property="progress" destination="sH1-Jv-qBR" id="IdM-nJ-PpV"/>
-                        <outlet property="promptLabel" destination="1fb-9g-uXY" id="GS3-97-1Xp"/>
-                    </connections>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
