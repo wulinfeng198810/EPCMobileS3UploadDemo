@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98B5D18583D68506BF975041 /* Pods_EPCMobileS3UploadDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD30C147DECDA7C749C15ECE /* Pods_EPCMobileS3UploadDemoTests.framework */; };
+		A3A5E15571FD47EF5AB29F23 /* Pods_EPCMobileS3UploadDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C745EAC8ACFF77EE372C4BB /* Pods_EPCMobileS3UploadDemo.framework */; };
+		B25BC61107CE92AADDA825B3 /* Pods_EPCMobileS3UploadDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */; };
+		B32B91C71EB8838E00603F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91C61EB8838E00603F05 /* AppDelegate.swift */; };
+		B32B91C91EB8838E00603F05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91C81EB8838E00603F05 /* ViewController.swift */; };
+		B32B91CC1EB8838E00603F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B91CA1EB8838E00603F05 /* Main.storyboard */; };
+		B32B91CE1EB8838E00603F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32B91CD1EB8838E00603F05 /* Assets.xcassets */; };
+		B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */; };
+		B32B91DC1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91DB1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift */; };
+		B32B91E71EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */; };
+		B3E25B061EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */; };
+		B3E25B071EB9C8DB0015FBA7 /* redMountain.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B051EB9C8DB0015FBA7 /* redMountain.png */; };
+		B3E25B091EB9DDCD0015FBA7 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25B081EB9DDCD0015FBA7 /* screen.png */; };
+		B3E25B0B1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */; };
+		B3E25B0D1EBC1BD00015FBA7 /* EPCUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B32B91D81EB8838E00603F05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32B91BB1EB8838E00603F05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B32B91C21EB8838E00603F05;
+			remoteInfo = EPCMobileS3UploadDemo;
+		};
+		B32B91E31EB8838E00603F05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32B91BB1EB8838E00603F05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B32B91C21EB8838E00603F05;
+			remoteInfo = EPCMobileS3UploadDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C745EAC8ACFF77EE372C4BB /* Pods_EPCMobileS3UploadDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3157B0B954D56049C94E4CD1 /* Pods-EPCMobileS3UploadDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		510E65512CCD869ED72EED3F /* Pods-EPCMobileS3UploadDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoTests/Pods-EPCMobileS3UploadDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		567E6CC51ADD4DE9AF0AD868 /* Pods-EPCMobileS3UploadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemo/Pods-EPCMobileS3UploadDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6AF8DD32C6E89B6931FEB327 /* Pods-EPCMobileS3UploadDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoTests/Pods-EPCMobileS3UploadDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		87BD8796F11D1B597967692A /* Pods-EPCMobileS3UploadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemo/Pods-EPCMobileS3UploadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AD30C147DECDA7C749C15ECE /* Pods_EPCMobileS3UploadDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32B91C31EB8838E00603F05 /* EPCMobileS3UploadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPCMobileS3UploadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32B91C61EB8838E00603F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B32B91C81EB8838E00603F05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B32B91CB1EB8838E00603F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B32B91CD1EB8838E00603F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B32B91D01EB8838E00603F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B32B91D21EB8838E00603F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32B91D71EB8838E00603F05 /* EPCMobileS3UploadDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPCMobileS3UploadDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32B91DB1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPCMobileS3UploadDemoTests.swift; sourceTree = "<group>"; };
+		B32B91DD1EB8838E00603F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32B91E21EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPCMobileS3UploadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPCMobileS3UploadDemoUITests.swift; sourceTree = "<group>"; };
+		B32B91E81EB8838E00603F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ios-CoreAnimation.pdf"; sourceTree = "<group>"; };
+		B3E25B051EB9C8DB0015FBA7 /* redMountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMountain.png; sourceTree = "<group>"; };
+		B3E25B081EB9DDCD0015FBA7 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSCognitoCredentialsProviderHelper.swift; sourceTree = "<group>"; };
+		B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCUploadController.swift; sourceTree = "<group>"; };
+		B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B32B91C01EB8838E00603F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A5E15571FD47EF5AB29F23 /* Pods_EPCMobileS3UploadDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91D41EB8838E00603F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B5D18583D68506BF975041 /* Pods_EPCMobileS3UploadDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91DF1EB8838E00603F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25BC61107CE92AADDA825B3 /* Pods_EPCMobileS3UploadDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		554E8F5742199BCCFC4A38B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87BD8796F11D1B597967692A /* Pods-EPCMobileS3UploadDemo.debug.xcconfig */,
+				567E6CC51ADD4DE9AF0AD868 /* Pods-EPCMobileS3UploadDemo.release.xcconfig */,
+				510E65512CCD869ED72EED3F /* Pods-EPCMobileS3UploadDemoTests.debug.xcconfig */,
+				6AF8DD32C6E89B6931FEB327 /* Pods-EPCMobileS3UploadDemoTests.release.xcconfig */,
+				B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */,
+				3157B0B954D56049C94E4CD1 /* Pods-EPCMobileS3UploadDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B32B91BA1EB8838E00603F05 = {
+			isa = PBXGroup;
+			children = (
+				B32B91C51EB8838E00603F05 /* EPCMobileS3UploadDemo */,
+				B32B91DA1EB8838E00603F05 /* EPCMobileS3UploadDemoTests */,
+				B32B91E51EB8838E00603F05 /* EPCMobileS3UploadDemoUITests */,
+				B32B91C41EB8838E00603F05 /* Products */,
+				554E8F5742199BCCFC4A38B6 /* Pods */,
+				E6CBC964C2D8D68E2AB7DC61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B32B91C41EB8838E00603F05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32B91C31EB8838E00603F05 /* EPCMobileS3UploadDemo.app */,
+				B32B91D71EB8838E00603F05 /* EPCMobileS3UploadDemoTests.xctest */,
+				B32B91E21EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B32B91C51EB8838E00603F05 /* EPCMobileS3UploadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B3E25B0E1EBC2CBA0015FBA7 /* Class */,
+				B3E25B0F1EBC2CBA0015FBA7 /* Constant */,
+				B3E25B101EBC2CBA0015FBA7 /* ThirdLib */,
+				B3E25B111EBC2CBA0015FBA7 /* Vendor */,
+				B32B91C61EB8838E00603F05 /* AppDelegate.swift */,
+				B32B91C81EB8838E00603F05 /* ViewController.swift */,
+				B32B91CA1EB8838E00603F05 /* Main.storyboard */,
+				B32B91CD1EB8838E00603F05 /* Assets.xcassets */,
+				B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */,
+				B32B91D21EB8838E00603F05 /* Info.plist */,
+				B3E25B041EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf */,
+				B3E25B051EB9C8DB0015FBA7 /* redMountain.png */,
+				B3E25B081EB9DDCD0015FBA7 /* screen.png */,
+				B3E25B0A1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */,
+				B3E25B0C1EBC1BD00015FBA7 /* EPCUploadController.swift */,
+			);
+			path = EPCMobileS3UploadDemo;
+			sourceTree = "<group>";
+		};
+		B32B91DA1EB8838E00603F05 /* EPCMobileS3UploadDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B32B91DB1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift */,
+				B32B91DD1EB8838E00603F05 /* Info.plist */,
+			);
+			path = EPCMobileS3UploadDemoTests;
+			sourceTree = "<group>";
+		};
+		B32B91E51EB8838E00603F05 /* EPCMobileS3UploadDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */,
+				B32B91E81EB8838E00603F05 /* Info.plist */,
+			);
+			path = EPCMobileS3UploadDemoUITests;
+			sourceTree = "<group>";
+		};
+		B3E25B0E1EBC2CBA0015FBA7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		B3E25B0F1EBC2CBA0015FBA7 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		B3E25B101EBC2CBA0015FBA7 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		B3E25B111EBC2CBA0015FBA7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		E6CBC964C2D8D68E2AB7DC61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C745EAC8ACFF77EE372C4BB /* Pods_EPCMobileS3UploadDemo.framework */,
+				AD30C147DECDA7C749C15ECE /* Pods_EPCMobileS3UploadDemoTests.framework */,
+				C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B32B91C21EB8838E00603F05 /* EPCMobileS3UploadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32B91EB1EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemo" */;
+			buildPhases = (
+				A09158FA2ECEA238E9633375 /* [CP] Check Pods Manifest.lock */,
+				B32B91BF1EB8838E00603F05 /* Sources */,
+				B32B91C01EB8838E00603F05 /* Frameworks */,
+				B32B91C11EB8838E00603F05 /* Resources */,
+				ABA4266BF4B0C48D2E805850 /* [CP] Embed Pods Frameworks */,
+				7BDF1C32E13A1427C86EACB0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EPCMobileS3UploadDemo;
+			productName = EPCMobileS3UploadDemo;
+			productReference = B32B91C31EB8838E00603F05 /* EPCMobileS3UploadDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B32B91D61EB8838E00603F05 /* EPCMobileS3UploadDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32B91EE1EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemoTests" */;
+			buildPhases = (
+				8FCC86FC052829087772B574 /* [CP] Check Pods Manifest.lock */,
+				B32B91D31EB8838E00603F05 /* Sources */,
+				B32B91D41EB8838E00603F05 /* Frameworks */,
+				B32B91D51EB8838E00603F05 /* Resources */,
+				92CA5D5B73616A5586E070F4 /* [CP] Embed Pods Frameworks */,
+				05FF7D98CD0C32DC9DEDE189 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32B91D91EB8838E00603F05 /* PBXTargetDependency */,
+			);
+			name = EPCMobileS3UploadDemoTests;
+			productName = EPCMobileS3UploadDemoTests;
+			productReference = B32B91D71EB8838E00603F05 /* EPCMobileS3UploadDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B32B91E11EB8838E00603F05 /* EPCMobileS3UploadDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32B91F11EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemoUITests" */;
+			buildPhases = (
+				D09169A3B0A9319D94F3121D /* [CP] Check Pods Manifest.lock */,
+				B32B91DE1EB8838E00603F05 /* Sources */,
+				B32B91DF1EB8838E00603F05 /* Frameworks */,
+				B32B91E01EB8838E00603F05 /* Resources */,
+				959B05EA9204623034CEE525 /* [CP] Embed Pods Frameworks */,
+				C4F91A7F6D9BDBB53E478DD1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32B91E41EB8838E00603F05 /* PBXTargetDependency */,
+			);
+			name = EPCMobileS3UploadDemoUITests;
+			productName = EPCMobileS3UploadDemoUITests;
+			productReference = B32B91E21EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B32B91BB1EB8838E00603F05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Lio;
+				TargetAttributes = {
+					B32B91C21EB8838E00603F05 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 9PJ22KK765;
+						ProvisioningStyle = Automatic;
+					};
+					B32B91D61EB8838E00603F05 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 9PJ22KK765;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B32B91C21EB8838E00603F05;
+					};
+					B32B91E11EB8838E00603F05 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 9PJ22KK765;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B32B91C21EB8838E00603F05;
+					};
+				};
+			};
+			buildConfigurationList = B32B91BE1EB8838E00603F05 /* Build configuration list for PBXProject "EPCMobileS3UploadDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B32B91BA1EB8838E00603F05;
+			productRefGroup = B32B91C41EB8838E00603F05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B32B91C21EB8838E00603F05 /* EPCMobileS3UploadDemo */,
+				B32B91D61EB8838E00603F05 /* EPCMobileS3UploadDemoTests */,
+				B32B91E11EB8838E00603F05 /* EPCMobileS3UploadDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B32B91C11EB8838E00603F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E25B071EB9C8DB0015FBA7 /* redMountain.png in Resources */,
+				B3E25B091EB9DDCD0015FBA7 /* screen.png in Resources */,
+				B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */,
+				B32B91CE1EB8838E00603F05 /* Assets.xcassets in Resources */,
+				B3E25B061EB9C8DB0015FBA7 /* ios-CoreAnimation.pdf in Resources */,
+				B32B91CC1EB8838E00603F05 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91D51EB8838E00603F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91E01EB8838E00603F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05FF7D98CD0C32DC9DEDE189 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemoTests/Pods-EPCMobileS3UploadDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BDF1C32E13A1427C86EACB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemo/Pods-EPCMobileS3UploadDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FCC86FC052829087772B574 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92CA5D5B73616A5586E070F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemoTests/Pods-EPCMobileS3UploadDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		959B05EA9204623034CEE525 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09158FA2ECEA238E9633375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABA4266BF4B0C48D2E805850 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemo/Pods-EPCMobileS3UploadDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F91A7F6D9BDBB53E478DD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09169A3B0A9319D94F3121D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B32B91BF1EB8838E00603F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32B91C91EB8838E00603F05 /* ViewController.swift in Sources */,
+				B3E25B0D1EBC1BD00015FBA7 /* EPCUploadController.swift in Sources */,
+				B32B91C71EB8838E00603F05 /* AppDelegate.swift in Sources */,
+				B3E25B0B1EBB0F710015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91D31EB8838E00603F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32B91DC1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32B91DE1EB8838E00603F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32B91E71EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B32B91D91EB8838E00603F05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B32B91C21EB8838E00603F05 /* EPCMobileS3UploadDemo */;
+			targetProxy = B32B91D81EB8838E00603F05 /* PBXContainerItemProxy */;
+		};
+		B32B91E41EB8838E00603F05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B32B91C21EB8838E00603F05 /* EPCMobileS3UploadDemo */;
+			targetProxy = B32B91E31EB8838E00603F05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B32B91CA1EB8838E00603F05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32B91CB1EB8838E00603F05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32B91D01EB8838E00603F05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B32B91E91EB8838E00603F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B32B91EA1EB8838E00603F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B32B91EC1EB8838E00603F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87BD8796F11D1B597967692A /* Pods-EPCMobileS3UploadDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B32B91ED1EB8838E00603F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567E6CC51ADD4DE9AF0AD868 /* Pods-EPCMobileS3UploadDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B32B91EF1EB8838E00603F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510E65512CCD869ED72EED3F /* Pods-EPCMobileS3UploadDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPCMobileS3UploadDemo.app/EPCMobileS3UploadDemo";
+			};
+			name = Debug;
+		};
+		B32B91F01EB8838E00603F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF8DD32C6E89B6931FEB327 /* Pods-EPCMobileS3UploadDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPCMobileS3UploadDemo.app/EPCMobileS3UploadDemo";
+			};
+			name = Release;
+		};
+		B32B91F21EB8838E00603F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EPCMobileS3UploadDemo;
+			};
+			name = Debug;
+		};
+		B32B91F31EB8838E00603F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3157B0B954D56049C94E4CD1 /* Pods-EPCMobileS3UploadDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9PJ22KK765;
+				INFOPLIST_FILE = EPCMobileS3UploadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epc.EPCMobileS3UploadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EPCMobileS3UploadDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B32B91BE1EB8838E00603F05 /* Build configuration list for PBXProject "EPCMobileS3UploadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32B91E91EB8838E00603F05 /* Debug */,
+				B32B91EA1EB8838E00603F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32B91EB1EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32B91EC1EB8838E00603F05 /* Debug */,
+				B32B91ED1EB8838E00603F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32B91EE1EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32B91EF1EB8838E00603F05 /* Debug */,
+				B32B91F01EB8838E00603F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32B91F11EB8838E00603F05 /* Build configuration list for PBXNativeTarget "EPCMobileS3UploadDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32B91F21EB8838E00603F05 /* Debug */,
+				B32B91F31EB8838E00603F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B32B91BB1EB8838E00603F05 /* Project object */;
+}
