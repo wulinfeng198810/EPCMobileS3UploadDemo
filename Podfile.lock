@@ -1,19 +1,41 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - AWSCognito (2.5.2):
     - AWSCore (= 2.5.2)
   - AWSCore (2.5.2)
   - AWSS3 (2.5.2):
     - AWSCore (= 2.5.2)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
 
 DEPENDENCIES:
+  - AFNetworking
   - AWSCognito
   - AWSS3
+  - FMDB
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AWSCognito: a29c52e3a3d4988f01b449c8b229a51b73d1c1bf
   AWSCore: b2fe455c2c7d6653521238c5b0b0ddb67ec4f063
   AWSS3: 1f53d780bae0a5949f11da99520c14684bc90af0
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
 
-PODFILE CHECKSUM: 527df9f6958ff1325f1c26a0e467b6a98eaacbdb
+PODFILE CHECKSUM: 875b7d9fa31504034f80223e3c3aa465ca09f780
 
 COCOAPODS: 1.2.0

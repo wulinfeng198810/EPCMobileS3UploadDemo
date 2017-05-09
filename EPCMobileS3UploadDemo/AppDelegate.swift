@@ -10,6 +10,8 @@ import UIKit
 import AWSCore
 import AWSS3
 import AWSCognito
+import FMDB
+import AFNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         EPCDirectory.shareInstance.deploy()
         
-        
+        EPCSqliteMangager.shareInstance.openDB()
         
         
 //        let cogCredent = AWSCognitoCredentialsProvider(regionType: .USEast1,

@@ -18,6 +18,7 @@ class EPCAwsS3TaskModel: NSObject {
     var aws_identifier:String?
     
     var totalBytesSent:Int64 = 0
+    
     var totalBytesExpectedToSend:Int64 = 0
     
 }

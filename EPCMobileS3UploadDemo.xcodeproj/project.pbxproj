@@ -37,7 +37,10 @@
 		B3E25B4D1EBC64D60015FBA7 /* EPCDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */; };
 		B3E25B4F1EBC696D0015FBA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */; };
 		B3E25B5A1EBC75A80015FBA7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E25B591EBC75A80015FBA7 /* libsqlite3.0.tbd */; };
-		B3E25B601EBC76320015FBA7 /* EPCSqliteMangager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */; };
+		B3E25BB61EC195710015FBA7 /* EPCSqliteMangager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BB41EC195710015FBA7 /* EPCSqliteMangager.swift */; };
+		B3E25BB71EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BB51EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift */; };
+		B3E25BB91EC1958B0015FBA7 /* EPCPhotoDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */; };
+		B3E25BBF1EC1A9470015FBA7 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25BBE1EC1A9470015FBA7 /* screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +115,10 @@
 		B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCDirectory.swift; sourceTree = "<group>"; };
 		B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B3E25B591EBC75A80015FBA7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCSqliteMangager.swift; sourceTree = "<group>"; };
+		B3E25BB41EC195710015FBA7 /* EPCSqliteMangager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCSqliteMangager.swift; sourceTree = "<group>"; };
+		B3E25BB51EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EPCSqliteMangager+EPCPhotoDBModel.swift"; sourceTree = "<group>"; };
+		B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCPhotoDBModel.swift; sourceTree = "<group>"; };
+		B3E25BBE1EC1A9470015FBA7 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
 		B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,6 +201,7 @@
 				B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */,
 				B32B91D21EB8838E00603F05 /* Info.plist */,
 				B3E25B4A1EBC637D0015FBA7 /* EPCMobileS3UploadDemo-Bridging-Header.h */,
+				B3E25BBE1EC1A9470015FBA7 /* screen.png */,
 			);
 			path = EPCMobileS3UploadDemo;
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */,
+				B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -313,7 +321,8 @@
 		B3E25B5B1EBC75F90015FBA7 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				B3E25B5F1EBC76320015FBA7 /* EPCSqliteMangager.swift */,
+				B3E25BB41EC195710015FBA7 /* EPCSqliteMangager.swift */,
+				B3E25BB51EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */,
+				B3E25BBF1EC1A9470015FBA7 /* screen.png in Resources */,
 				B32B91CE1EB8838E00603F05 /* Assets.xcassets in Resources */,
 				B32B91CC1EB8838E00603F05 /* Main.storyboard in Resources */,
 			);
@@ -616,17 +626,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32B91C91EB8838E00603F05 /* ViewController.swift in Sources */,
+				B3E25BB91EC1958B0015FBA7 /* EPCPhotoDBModel.swift in Sources */,
 				B3E25B4F1EBC696D0015FBA7 /* String+Extensions.swift in Sources */,
 				B3E25B441EBC603B0015FBA7 /* UILabel+CZAddition.m in Sources */,
 				B3E25B3F1EBC603B0015FBA7 /* NSString+CZBase64.m in Sources */,
 				B3E25B141EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift in Sources */,
 				B32B91C71EB8838E00603F05 /* AppDelegate.swift in Sources */,
 				B3E25B401EBC603B0015FBA7 /* NSString+CZHash.m in Sources */,
+				B3E25BB71EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift in Sources */,
 				B3E25B431EBC603B0015FBA7 /* UIColor+CZAddition.m in Sources */,
 				B3E25B3E1EBC603B0015FBA7 /* NSObject+CZRuntime.m in Sources */,
 				B3E25B471EBC603B0015FBA7 /* UIViewController+CZAddition.m in Sources */,
+				B3E25BB61EC195710015FBA7 /* EPCSqliteMangager.swift in Sources */,
 				B3E25B451EBC603B0015FBA7 /* UIScreen+CZAddition.m in Sources */,
-				B3E25B601EBC76320015FBA7 /* EPCSqliteMangager.swift in Sources */,
 				B3E25B1A1EBC50B60015FBA7 /* EPCUploadListController.swift in Sources */,
 				B3E25B4D1EBC64D60015FBA7 /* EPCDirectory.swift in Sources */,
 				B3E25B421EBC603B0015FBA7 /* UIButton+CZAddition.m in Sources */,

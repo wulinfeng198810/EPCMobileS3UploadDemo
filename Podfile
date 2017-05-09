@@ -8,6 +8,7 @@ target 'EPCMobileS3UploadDemo' do
   pod 'AWSCognito'
   pod 'AWSS3'
   pod 'AFNetworking'
+  pod 'FMDB'
 
   target 'EPCMobileS3UploadDemoTests' do
     inherit! :search_paths

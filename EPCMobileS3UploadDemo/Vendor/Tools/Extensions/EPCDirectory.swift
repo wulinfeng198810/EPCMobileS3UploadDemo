@@ -8,22 +8,36 @@
 
 import Foundation
 
-private let photoFinderName = "EPC-Photo"
+// photo finder
+private let photo_path = "epc-photo"
+
+// db finder
+private let epc_db_path = "epc-db-path"
 
 class EPCDirectory {
     
-    static let shareInstance: EPCDirectory = EPCDirectory()
+    static let shareInstance:EPCDirectory = EPCDirectory()
     
     func deploy() {
         
-        let epcPhotoDir = epcPhotoDirectory()
+        let finders = [epcPhotoDirectory(),
+                       epcDBDirectory()]
         
-        let ret = FileManager.default.fileExists(atPath: epcPhotoDir)
-        
-        if ret == false {
-            try? FileManager.default.createDirectory(atPath: epcPhotoDir,
-                                                     withIntermediateDirectories: true,
-                                                     attributes: nil)
+        for path in finders {
+            
+            let ret = FileManager.default.fileExists(atPath: path)
+            if ret {
+                continue
+            }
+            
+            do {
+                try FileManager.default.createDirectory(atPath: path,
+                                                        withIntermediateDirectories: true,
+                                                        attributes: nil)
+                
+            } catch let error as NSError {
+                debugPrint("\(#function) failed: \(error.localizedDescription)")
+            }
         }
     }
     
@@ -32,6 +46,10 @@ class EPCDirectory {
     }
     
     func epcPhotoDirectory() -> String {
-        return documentDirectory() + "/" + "\(photoFinderName)"
+        return documentDirectory() + "/" + "\(photo_path)"
+    }
+    
+    func epcDBDirectory() -> String {
+        return documentDirectory() + "/" + "\(epc_db_path)"
     }
 }

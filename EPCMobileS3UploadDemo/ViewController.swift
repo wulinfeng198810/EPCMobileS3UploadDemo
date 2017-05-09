@@ -34,6 +34,12 @@ class ViewController: UIViewController {
                             target: self,
                             action: #selector(pushToUploadList))
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        saveImageThenStartTask(image: UIImage(named: "screen"))
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,7 +54,7 @@ class ViewController: UIViewController {
             self.imagePicker(camera: true)
         }
         
-        let albumAction = UIAlertAction(title: "Album", style: .default) { (_) in
+        let albumAction = UIAlertAction(title: "Choose from Album", style: .default) { (_) in
             self.imagePicker(camera: false)
         }
         
@@ -77,10 +83,7 @@ class ViewController: UIViewController {
 // MARK: - ImagePicker
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        print(info)
         
         var image: UIImage?
         
@@ -92,23 +95,32 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             }
         }
         
-        let fileName = String.uuidString() + ".png"
-        let filePath = EPCDirectory.shareInstance.documentDirectory() + "/" + fileName
-        let fileURL = URL(fileURLWithPath: filePath)
+        saveImageThenStartTask(image: image)
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func saveImageThenStartTask(image: UIImage?) {
         
         guard let img = image,
             let data = UIImagePNGRepresentation(img) as NSData? else {
-            
-            picker.dismiss(animated: true, completion: nil)
-                
-            return
+                return
         }
         
+        let photoid = String.uuidString()
+        let filePath = EPCDirectory.shareInstance.epcPhotoDirectory() + "/" + photoid + ".png"
+        let fileURL = URL(fileURLWithPath: filePath)
         
         // save image, then create upload task
-        
         let ret = data.write(to: fileURL, atomically: true)
+        debugPrint("\n save image: \(ret ? "success" : "failed")")
         
-        picker.dismiss(animated: true, completion: nil)
+        let photoDBModel = EPCPhotoDBModel()
+        photoDBModel.photoid = photoid
+        photoDBModel.transferState = EPCPhotoDBModel.EPCPhotoUploadState.EPCPhotoUploadState_running
+        _ = EPCSqliteMangager.shareInstance.insertPhotoDBModel(photo: photoDBModel)
+        
+        EPCAwsS3TaskManager.manager.upload(photo: photoDBModel)
     }
 }
