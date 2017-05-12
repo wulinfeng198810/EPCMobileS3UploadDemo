@@ -9,41 +9,47 @@
 import UIKit
 import AWSS3
 
+private let EPCUploadListCellID = "EPCUploadListCell"
+
 class ViewController: UIViewController {
 
-    @IBOutlet weak var progress: UIProgressView!
-    
-    @IBOutlet weak var promptLabel: UILabel!
-    
-    var s3TransferManager: AWSS3TransferManager?
-    
-    var uploadRequest: AWSS3TransferManagerUploadRequest?
+    lazy var tableView = UITableView()
+    var dataArray = Array<EPCPhotoDBModel>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem =
+        navigationItem.leftBarButtonItem =
             UIBarButtonItem(title: "Picture",
                             style: .plain,
                             target: self,
                             action: #selector(popImagePicker))
         
-        self.navigationItem.rightBarButtonItem =
+        navigationItem.rightBarButtonItem =
             UIBarButtonItem(title: "UploadList",
                             style: .plain,
                             target: self,
                             action: #selector(pushToUploadList))
+        
+        setUI()
+        
+        loadHistoryUploadPhotos()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    private func loadHistoryUploadPhotos() {
+        guard let array = EPCSqliteMangager.shareInstance.findAllPhotoDBModel() else {
+            return
+        }
         
-        saveImageThenStartTask(image: UIImage(named: "screen"))
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        for uploadPhoto in array {
+        
+            if uploadPhoto.transferState == .EPCPhotoUploadState_failed {
+                EPCAwsS3TaskManager.manager.upload(photo: uploadPhoto, isNewTask:false)
+            }
+        }
+        
+        dataArray += array
+        tableView.reloadData()
     }
     
     @objc private func popImagePicker() {
@@ -77,6 +83,19 @@ class ViewController: UIViewController {
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func setUI() {
+        view.backgroundColor = UIColor.white
+        tableView.frame = self.view.bounds
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 120
+        
+        view.addSubview(tableView)
+        
+        tableView.register(UINib(nibName: "EPCUploadListCell", bundle: nil),
+                           forCellReuseIdentifier: EPCUploadListCellID)
     }
 }
 
@@ -118,9 +137,37 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         let photoDBModel = EPCPhotoDBModel()
         photoDBModel.photoid = photoid
-        photoDBModel.transferState = EPCPhotoDBModel.EPCPhotoUploadState.EPCPhotoUploadState_running
-        _ = EPCSqliteMangager.shareInstance.insertPhotoDBModel(photo: photoDBModel)
+        photoDBModel.transferState = .EPCPhotoUploadState_running
         
-        EPCAwsS3TaskManager.manager.upload(photo: photoDBModel)
+        dataArray.append(photoDBModel)
+        tableView.reloadData()
+        
+        EPCAwsS3TaskManager.manager.upload(photo: photoDBModel, isNewTask: true)
+    }
+}
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: EPCUploadListCellID) as! EPCUploadListCell
+        cell.delegate = self
+        cell.model = dataArray[indexPath.row]
+        
+        return cell
+    }
+    
+}
+
+// MARK: - EPCPhotoDBModelProtocol
+extension ViewController: EPCPhotoDBModelProtocol {
+    
+    func EPCPhotoDBModelChangeState(photoModel: EPCPhotoDBModel) {
+        EPCAwsS3TaskManager.manager.changeUpload(photoModel: photoModel)
     }
 }

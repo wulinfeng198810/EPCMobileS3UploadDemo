@@ -40,7 +40,7 @@ class EPCSqliteMangager:NSObject {
                 
             } catch let error as NSError {
                 
-                debugPrint("\(#function) failed: \(error.localizedDescription)")
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
                 
                 ret = false
             }

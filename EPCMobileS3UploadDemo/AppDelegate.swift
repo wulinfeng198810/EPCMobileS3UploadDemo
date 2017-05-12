@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
 //        AWSLogger.default().logLevel = .verbose
-        
 
         let devAuth = DeveloperAuthenticatedIdentityProvider(regionType: .USEast1, identityPoolId: "us-east-1:e92bd5a8-717b-4af2-bf20-a518fbdb7dca", useEnhancedFlow: true, identityProviderManager:nil)
         
@@ -36,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         EPCDirectory.shareInstance.deploy()
         
         EPCSqliteMangager.shareInstance.openDB()
+        
+        EPCAwsS3TaskManager.manager.networkMonitor(monitor: nil)
         
         
 //        let cogCredent = AWSCognitoCredentialsProvider(regionType: .USEast1,
@@ -70,6 +71,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        _ = EPCSqliteMangager.shareInstance.updateAllPhotoDBNotCompletedStateToFailedStateWhenAppTerminate()
     }
 
 

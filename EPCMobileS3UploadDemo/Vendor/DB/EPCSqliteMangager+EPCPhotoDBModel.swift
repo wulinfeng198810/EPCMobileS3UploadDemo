@@ -12,6 +12,8 @@ import Foundation
 extension EPCSqliteMangager {
     
     
+    // MARK: - insert
+    
     /// insert photo dbModel
     ///
     /// - Parameter photo: photo dbModel
@@ -29,7 +31,7 @@ extension EPCSqliteMangager {
             do {
                 try db?.executeUpdate(sql, values: values)
             } catch {
-                debugPrint("\(#function) failed: \(error.localizedDescription)")
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
                 ret = false
             }
         }
@@ -38,11 +40,54 @@ extension EPCSqliteMangager {
     }
     
     
+    // MARK: - query
+    
+    /// query all photo db datas
+    ///
+    /// - Returns: [EPCPhotoDBModel]?
+    func findAllPhotoDBModel() -> [EPCPhotoDBModel]? {
+        let sql = "SELECT * FROM EPCPhotoDBModel ORDER BY timestamp"
+        
+        var array = Array<EPCPhotoDBModel>()
+        
+        fmdbQueue.inDatabase { (db) in
+            
+            do {
+                guard let rs = try db?.executeQuery(sql, values: nil) else {
+                    return
+                }
+                
+                while rs.next() {
+                    
+                    if let photoid = rs.string(forColumn: "photoid"),
+                        let timestamp = rs.string(forColumn: "timestamp") {
+                        
+                        let transferState = rs.int(forColumn: "transferState")
+                        
+                        let ts = EPCPhotoDBModel.stateWithInt(int: transferState)
+                        
+                        let photoModel = EPCPhotoDBModel()
+                        photoModel.photoid = photoid
+                        photoModel.transferState = ts
+                        photoModel.timestamp = timestamp
+                        
+                        array.append(photoModel)
+                    }
+                }
+                
+            } catch {
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
+            }
+        }
+        
+        return array.count > 0 ? array : nil
+    }
+    
     /// query the all db datas of EPCPhotoDBModel with 'photoid'
     ///
     /// - Parameter withPhotoid: photoid
-    /// - Returns: return [EPCPhotoDBModel]?
-    func findAllPhotoDBModel(withPhotoid: String) -> [EPCPhotoDBModel]? {
+    /// - Returns: [EPCPhotoDBModel]?
+    private func findAllPhotoDBModel(withPhotoid: String) -> [EPCPhotoDBModel]? {
         
         let sql = "SELECT * FROM EPCPhotoDBModel WHERE photoid = '\(withPhotoid)'"
         
@@ -74,7 +119,7 @@ extension EPCSqliteMangager {
                 }
                 
             } catch {
-                debugPrint("\(#function) failed: \(error.localizedDescription)")
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
             }
         }
         
@@ -85,7 +130,7 @@ extension EPCSqliteMangager {
     /// query the first db data of EPCPhotoDBModel with 'photoid'
     ///
     /// - Parameter withPhotoid: photo id
-    /// - Returns: return EPCPhotoDBModel?
+    /// - Returns: EPCPhotoDBModel?
     func findFirstPhotoDBModel(withPhotoid: String) -> EPCPhotoDBModel? {
         
         guard let array = findAllPhotoDBModel(withPhotoid: withPhotoid) else {
@@ -95,6 +140,8 @@ extension EPCSqliteMangager {
         return array[0]
     }
     
+    
+    // MARK: - update
     
     /// update with 'photoid'
     ///
@@ -114,7 +161,7 @@ extension EPCSqliteMangager {
             do {
                 try db?.executeUpdate(sql, values: nil)
             } catch {
-                debugPrint("\(#function) failed: \(error.localizedDescription)")
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
                 ret = false
             }
         }
@@ -122,6 +169,35 @@ extension EPCSqliteMangager {
         return ret
     }
     
+    /// update all db datas of EPCPhotoDBModel that 'state' is not completed state: 'state' -> failed
+    /// when application will terminate
+    /// note: failed and success are completed, default are not completed
+    ///
+    /// - Returns: succeed or failed
+    func updateAllPhotoDBNotCompletedStateToFailedStateWhenAppTerminate() -> Bool {
+        
+        let successStateInt = EPCPhotoDBModel.EPCPhotoUploadState.EPCPhotoUploadState_success.hashValue
+        let failedStateInt = EPCPhotoDBModel.EPCPhotoUploadState.EPCPhotoUploadState_failed.hashValue
+        
+        let sql = "UPDATE EPCPhotoDBModel SET transferState = \(failedStateInt) WHERE transferState != \(successStateInt) AND transferState != \(failedStateInt)"
+        
+        var ret = true
+        
+        fmdbQueue.inDatabase { (db) in
+            do {
+                try db?.executeUpdate(sql, values: nil)
+            } catch {
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
+                ret = false
+            }
+        }
+        
+        return ret
+    }
+
+    
+    
+    // MARK: - delete
     
     /// delete with 'photoid'
     ///
@@ -137,12 +213,13 @@ extension EPCSqliteMangager {
             do {
                 try db?.executeUpdate(sql, values: nil)
             } catch {
-                debugPrint("\(#function) failed: \(error.localizedDescription)")
+                epc_DebugForError(errorString:"\(#function) failed: \(error.localizedDescription)")
                 ret = false
             }
         }
         
         return ret
     }
+    
     
 }

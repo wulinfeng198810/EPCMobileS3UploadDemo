@@ -34,8 +34,5 @@ class DeveloperAuthenticatedIdentityProvider : AWSCognitoCredentialsProviderHelp
         let task = AWSTask(result: token)
         let task1 = task as! AWSTask<NSString>
         return task1
-        
-//        self.identityId = "us-east-1:5f9bf9fb-937d-45e8-b715-7c9ac7d3f91d"
-//        return AWSTask(result: "eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6NWY5YmY5ZmItOTM3ZC00NWU4LWI3MTUtN2M5YWM3ZDNmOTFkIiwiYXVkIjoidXMtZWFzdC0xOmU5MmJkNWE4LTcxN2ItNGFmMi1iZjIwLWE1MThmYmRiN2RjYSIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiZXBjbW9iaWxlIiwiZXBjbW9iaWxlOnVzLWVhc3QtMTplOTJiZDVhOC03MTdiLTRhZjItYmYyMC1hNTE4ZmJkYjdkY2E6NzU5Il0sImlzcyI6Imh0dHBzOi8vY29nbml0by1pZGVudGl0eS5hbWF6b25hd3MuY29tIiwiZXhwIjoxNDkzOTczMjM1LCJpYXQiOjE0OTM4ODY4MzV9.VHH9wl8SNwub8PKboBZpG0xJtYh-7rHvDSgIN5FacLxT4FaggnoIK0crkS4HQkelIYCcMCbvT5qpOuu6MY9l7hBkfLEke1XdhGemQFXj7_oygoymB3PZFsDBzXYOUwYzmDpRWBS5Dg2IUQRcaAACv-DL3pW4hvZ_yPynjUj_aLvmpSML9bBpmqKKUYVvHA90cxr9-njQHwOOl9BA_SZBSFa__tLTImfpU0ARayhOWNxf2UuTKjs4L6p4TIJv6dPZvDDIDS76e4g_PNuCQ4Z7LnBFrn2Q_5wwXpZ4bEcF3BeTYh6daM_XkzxYTnlGNcY8P6D60AhukJTrYUGOrGLBZA")
     }
 }

@@ -17,8 +17,8 @@
 		B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B91CF1EB8838E00603F05 /* LaunchScreen.storyboard */; };
 		B32B91DC1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91DB1EB8838E00603F05 /* EPCMobileS3UploadDemoTests.swift */; };
 		B32B91E71EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */; };
+		B3A8BB621EC4532A0026BB98 /* UIImage+Extentsions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8BB611EC4532A0026BB98 /* UIImage+Extentsions.swift */; };
 		B3E25B141EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */; };
-		B3E25B161EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */; };
 		B3E25B181EBC4D470015FBA7 /* EPCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B171EBC4D470015FBA7 /* EPCConstants.swift */; };
 		B3E25B1A1EBC50B60015FBA7 /* EPCUploadListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */; };
 		B3E25B3C1EBC603B0015FBA7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E25B251EBC603B0015FBA7 /* NSArray+Log.m */; };
@@ -41,6 +41,8 @@
 		B3E25BB71EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BB51EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift */; };
 		B3E25BB91EC1958B0015FBA7 /* EPCPhotoDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */; };
 		B3E25BBF1EC1A9470015FBA7 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E25BBE1EC1A9470015FBA7 /* screen.png */; };
+		B3E25BC21EC303670015FBA7 /* EPCUploadListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E25BC01EC303670015FBA7 /* EPCUploadListCell.swift */; };
+		B3E25BC31EC303670015FBA7 /* EPCUploadListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E25BC11EC303670015FBA7 /* EPCUploadListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +83,8 @@
 		B32B91E21EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPCMobileS3UploadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32B91E61EB8838E00603F05 /* EPCMobileS3UploadDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPCMobileS3UploadDemoUITests.swift; sourceTree = "<group>"; };
 		B32B91E81EB8838E00603F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A8BB611EC4532A0026BB98 /* UIImage+Extentsions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extentsions.swift"; sourceTree = "<group>"; };
 		B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCAwsS3TaskManager.swift; sourceTree = "<group>"; };
-		B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCAwsS3TaskModel.swift; sourceTree = "<group>"; };
 		B3E25B171EBC4D470015FBA7 /* EPCConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCConstants.swift; sourceTree = "<group>"; };
 		B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCUploadListController.swift; sourceTree = "<group>"; };
 		B3E25B231EBC603B0015FBA7 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		B3E25BB51EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EPCSqliteMangager+EPCPhotoDBModel.swift"; sourceTree = "<group>"; };
 		B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCPhotoDBModel.swift; sourceTree = "<group>"; };
 		B3E25BBE1EC1A9470015FBA7 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		B3E25BC01EC303670015FBA7 /* EPCUploadListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCUploadListCell.swift; sourceTree = "<group>"; };
+		B3E25BC11EC303670015FBA7 /* EPCUploadListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPCUploadListCell.xib; sourceTree = "<group>"; };
 		B619A28BC82EB6EAAF6D5F82 /* Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPCMobileS3UploadDemoUITests/Pods-EPCMobileS3UploadDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C917BB66EEAB46863D77F1B1 /* Pods_EPCMobileS3UploadDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPCMobileS3UploadDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -229,6 +233,8 @@
 			children = (
 				B3E25B191EBC50B60015FBA7 /* EPCUploadListController.swift */,
 				B3E25BB81EC1958B0015FBA7 /* EPCPhotoDBModel.swift */,
+				B3E25BC01EC303670015FBA7 /* EPCUploadListCell.swift */,
+				B3E25BC11EC303670015FBA7 /* EPCUploadListCell.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -263,7 +269,6 @@
 			children = (
 				B3E25B481EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift */,
 				B3E25B131EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift */,
-				B3E25B151EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift */,
 			);
 			path = EPCAwsS3TaskManager;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			children = (
 				B3E25B4C1EBC64D60015FBA7 /* EPCDirectory.swift */,
 				B3E25B4E1EBC696D0015FBA7 /* String+Extensions.swift */,
+				B3A8BB611EC4532A0026BB98 /* UIImage+Extentsions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32B91D11EB8838E00603F05 /* LaunchScreen.storyboard in Resources */,
+				B3E25BC31EC303670015FBA7 /* EPCUploadListCell.xib in Resources */,
 				B3E25BBF1EC1A9470015FBA7 /* screen.png in Resources */,
 				B32B91CE1EB8838E00603F05 /* Assets.xcassets in Resources */,
 				B32B91CC1EB8838E00603F05 /* Main.storyboard in Resources */,
@@ -633,6 +640,7 @@
 				B3E25B141EBC482F0015FBA7 /* EPCAwsS3TaskManager.swift in Sources */,
 				B32B91C71EB8838E00603F05 /* AppDelegate.swift in Sources */,
 				B3E25B401EBC603B0015FBA7 /* NSString+CZHash.m in Sources */,
+				B3E25BC21EC303670015FBA7 /* EPCUploadListCell.swift in Sources */,
 				B3E25BB71EC195710015FBA7 /* EPCSqliteMangager+EPCPhotoDBModel.swift in Sources */,
 				B3E25B431EBC603B0015FBA7 /* UIColor+CZAddition.m in Sources */,
 				B3E25B3E1EBC603B0015FBA7 /* NSObject+CZRuntime.m in Sources */,
@@ -642,13 +650,13 @@
 				B3E25B1A1EBC50B60015FBA7 /* EPCUploadListController.swift in Sources */,
 				B3E25B4D1EBC64D60015FBA7 /* EPCDirectory.swift in Sources */,
 				B3E25B421EBC603B0015FBA7 /* UIButton+CZAddition.m in Sources */,
+				B3A8BB621EC4532A0026BB98 /* UIImage+Extentsions.swift in Sources */,
 				B3E25B3D1EBC603B0015FBA7 /* NSAttributedString+CZAdditon.m in Sources */,
 				B3E25B491EBC63620015FBA7 /* AWSCognitoCredentialsProviderHelper.swift in Sources */,
 				B3E25B3C1EBC603B0015FBA7 /* NSArray+Log.m in Sources */,
 				B3E25B181EBC4D470015FBA7 /* EPCConstants.swift in Sources */,
 				B3E25B461EBC603B0015FBA7 /* UIView+CZAddition.m in Sources */,
 				B3E25B411EBC603B0015FBA7 /* NSString+CZPath.m in Sources */,
-				B3E25B161EBC49C30015FBA7 /* EPCAwsS3TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9PJ22KK765;
 				INFOPLIST_FILE = EPCMobileS3UploadDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

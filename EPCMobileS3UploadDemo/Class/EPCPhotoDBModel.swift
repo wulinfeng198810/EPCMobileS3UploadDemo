@@ -9,18 +9,32 @@
 import UIKit
 import AWSS3
 
+protocol EPCPhotoDBModelProtocol {
+    func EPCPhotoDBModelChangeState(photoModel:EPCPhotoDBModel)
+}
+
+public typealias EPCPhotoDBModelProgressBlock = (_ progressPersent:Float) -> Swift.Void
+public typealias EPCPhotoDBModelCompletionHandler = (_ isSuccess: Bool, _ error: NSError?) -> Swift.Void
+
 class EPCPhotoDBModel: NSObject {
     
     // upload request task
     var uploadRequest:AWSS3TransferManagerUploadRequest?
     var totalBytesSent:Int64 = 0
-    var totalBytesExpectedToSend:Int64 = 0
+    var totalBytesExpectedToSend:Int64 = 1
+    
+    var completionHandler: EPCPhotoDBModelCompletionHandler?
+    var progressBlock: EPCPhotoDBModelProgressBlock?
     
     // db property
     var pk:Int = -1
     var photoid:String?
     var transferState:EPCPhotoUploadState = .EPCPhotoUploadState_notStart
     var timestamp:String?
+    
+    var filePath: String {
+        return EPCDirectory.shareInstance.epcPhotoDirectory() + "/" + photoid! + ".png"
+    }
     
     enum EPCPhotoUploadState {
         case EPCPhotoUploadState_notStart
@@ -37,25 +51,25 @@ class EPCPhotoDBModel: NSObject {
         
         switch int {
         case 0:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_notStart
+            state = .EPCPhotoUploadState_notStart
             
         case 1:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_running
+            state = .EPCPhotoUploadState_running
             
         case 2:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_pause
+            state = .EPCPhotoUploadState_pause
             
         case 3:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_cancel
+            state = .EPCPhotoUploadState_cancel
             
         case 4:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_failed
+            state = .EPCPhotoUploadState_failed
             
         case 5:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_success
+            state = .EPCPhotoUploadState_success
             
         default:
-            state = EPCPhotoUploadState.EPCPhotoUploadState_notStart
+            state = .EPCPhotoUploadState_notStart
         }
         
         return state
